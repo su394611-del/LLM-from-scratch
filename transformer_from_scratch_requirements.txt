@@ -1,0 +1,8 @@
+# For --train and --full. --smoke-test only needs torch + tqdm.
+torch>=2.6
+tqdm>=4.66
+transformers>=5.0,<6
+datasets>=4.0,<6
+# Optional diagram generation:
+# torchview
+# graphviz
