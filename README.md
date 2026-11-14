@@ -187,7 +187,7 @@ The encoder is implemented directly using PyTorch modules, rather than instantia
 1. Load either synthetic smoke-test reviews or the Yelp Polarity dataset.
 2. Tokenize and produce frozen token embeddings, plus padding/attention masks.
 3. Train the custom Transformer with `AdamW` and cross-entropy loss.
-4. Clip gradient norm to `1.0` and report train/validation loss and accuracy.
+4. Clip the gradient norm to `1.0` and report train/validation loss and accuracy.
 5. Save the model checkpoint when validation accuracy improves.
 6. Reload the best checkpoint and evaluate on the held-out test split **once**.
 
@@ -202,7 +202,7 @@ The saved artifact contains the model state and training metadata, but **not the
 ## Validation status
 
 - Python source compilation: checked successfully.
-- Offline smoke test: executed successfully on CPU with PyTorch `2.10.0+cpu`.
+- Offline smoke test: executed successfully on CPU/GPU with PyTorch `2.10.0+cpu`.
 - The run completed both epochs, saved a checkpoint, reloaded it, and completed final test evaluation.
 - The synthetic test's measured accuracy is **not a Yelp Polarity benchmark**.
 - Large Yelp training and CUDA acceleration have **not** been verified as part of this README preparation.
