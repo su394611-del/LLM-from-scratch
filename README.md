@@ -178,7 +178,7 @@ Final LayerNorm → masked mean pooling → Linear classifier
 Logits for [negative, positive]
 ```
 
-In the real-data path, MiniLM provides a **384-dimensional** frozen token embedding matrix. With the default configuration, the script builds **3 Transformer encoder blocks** with **6 attention heads** per block.
+In the real-data path, MiniLM provides a **384-dimensional** frozen token embedding matrix. By default, the script builds **3 Transformer encoder blocks** with **6 attention heads** per block.
 
 The encoder is implemented directly using PyTorch modules, rather than instantiating a pretrained Transformer encoder for the classifier.
 
@@ -216,7 +216,7 @@ python -c "import torch, tqdm, transformers, datasets; print('Imports OK')"
 python -m pip check
 ```
 
-**` torch.cuda.is_available()` is `False`** — The script will fall back to CPU for real-data training. Check the installed PyTorch CUDA build and the NVIDIA driver. A working GPU driver alone does not mean the currently installed PyTorch distribution supports CUDA.
+**` torch.cuda.is_available()` is `False`** — The script will fall back to CPU/GPU for real-data training. Check the installed PyTorch CUDA build and the NVIDIA driver. A working GPU driver alone does not mean the currently installed PyTorch distribution supports CUDA.
 
 **GPU out-of-memory** — Try `--train --batch-size 1 --max-len 64 --sdpa`, or run the smoke test on CPU—the `--full` preset overrides some batch and length parameters.
 
@@ -238,7 +238,7 @@ Consult the dataset and model pages for their respective licensing and usage con
 
 ## License
 
-No license is included in the supplied project files. If you intend other people to reuse or modify your code, add a `LICENSE` file after selecting a license you are authorized to apply (for example, MIT or Apache-2.0).
+This project is licensed under the Apache License, Version 2.0.© 2026 Sudhanshu Shukla · Licensed under the Apache License, Version 2.0.
 
 ## Disclaimer
 
