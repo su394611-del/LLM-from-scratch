@@ -1,10 +1,10 @@
 # Transformer Encoder from Scratch for Sentiment Classification
 
-A practical, educational PyTorch project that implements a **Transformer encoder from scratch** to classify customer reviews as **positive or negative**.
+A practical PyTorch project that implements a **Transformer encoder from scratch** to classify customer reviews as **positive or negative**.
 
-The project includes hand-written multi-head self-attention, sinusoidal positional encoding, pre-layer-normalization encoder blocks, feed-forward networks, residual connections, masked mean pooling, and a binary classification head. It also includes an optional optimized attention path using PyTorch's scaled dot-product attention (SDPA).
+The project includes hand-written multi-head self-attention, sinusoidal positional encoding, pre-layer-normalization encoder blocks, feed-forward networks, residual connections, masked mean pooling, and a binary classification head. It also includes an optional optimized attention path using PyTorch's scaled dot-product attention (SDPA). A new GPT-style decoder-only model will be built from scratch in the next iteration.
 
-> **Scope:** The Transformer encoder and classification head are trained from scratch. For real Yelp experiments, the input tokenizer and **frozen token-embedding matrix** are borrowed from [`sentence-transformers/all-MiniLM-L6-v2`](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2). This is **not** a generative LLM or an entirely pretrained-from-scratch language model.
+> **Scope:** The Transformer encoder and classification head are trained from scratch. For real Yelp experiments, the input tokenizer and **frozen token-embedding matrix** are borrowed from [`sentence-transformers/all-MiniLM-L6-v2`](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2). **A new small GPT-style decoder-only model will be built from scratch in the next iteration**.
 
 ## Features
 
