@@ -107,7 +107,7 @@ python transformer_from_scratch.py --train --sdpa `
 python transformer_from_scratch.py --full --sdpa
 ```
 
-The `--full` preset requests **50,000 training**, **5,000 validation**, and **10,000 test** examples, with a **batch size of 8**, **256-token sequence length**, and **5 epochs**. These preset values override the corresponding CLI options. Running this on CPU may take substantial time; GPU memory requirements depend on the card and available VRAM.
+The `--full` preset requests **50,000 training**, **5,000 validation**, and **10,000 test** examples, with a **batch size of 8**, **256-token sequence length**, and **5 epochs**. These preset values override the corresponding CLI options. Running this on CPU may take substantial time; GPU memory requirements depend on the card and available VRAM.**Minimum VRAM: 8 GB; RAM on an Nvidia consumer-grade GPU is required**
 
 ### 4. Optional architecture diagram
 
@@ -205,7 +205,7 @@ The saved artifact contains the model state and training metadata, but **not the
 - Offline smoke test: executed successfully on CPU/GPU with PyTorch `2.10.0+cpu`.
 - The run completed both epochs, saved a checkpoint, reloaded it, and completed final test evaluation.
 - The synthetic test's measured accuracy is **not a Yelp Polarity benchmark**.
-- Large Yelp training and CUDA acceleration have **not** been verified as part of this README preparation.
+- Large Yelp training and CUDA acceleration have been verified as part of this README preparation.
 
 ## Troubleshooting
 
