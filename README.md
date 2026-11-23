@@ -216,7 +216,7 @@ python -c "import torch, tqdm, transformers, datasets; print('Imports OK')"
 python -m pip check
 ```
 
-**` torch.cuda.is_available()` is `False`** — The script will fall back to CPU/GPU for real-data training. Check the installed PyTorch CUDA build and the NVIDIA driver. A working GPU driver alone does not mean the currently installed PyTorch distribution supports CUDA.
+**` torch.cuda.is_available()` is `False`** — The script can fall back to CPU for real-data training. Check the installed PyTorch CUDA build and the NVIDIA driver. A working GPU driver alone does not mean the currently installed PyTorch distribution supports CUDA.
 
 **GPU out-of-memory** — Try `--train --batch-size 1 --max-len 64 --sdpa`, or run the smoke test on CPU—the `--full` preset overrides some batch and length parameters.
 
